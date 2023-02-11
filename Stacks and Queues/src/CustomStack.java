@@ -17,10 +17,11 @@ public class CustomStack {
 
 	//Insert i.e. Push
 
-	private boolean push(int item) throws StackException{
+	public boolean push(int item){
 
 		if(isFull()){
-			throw new StackException("Cannot push in an empty stack");
+			System.out.println("Stack is full");
+			return false;
 		}
 
 		ptr++;
@@ -28,34 +29,35 @@ public class CustomStack {
 		return true;
 	}
 
-	private boolean isFull() {
+	public boolean isFull() {
 		return ptr == data.length-1; // stack will only be full when
 		                             // the value of pointer is greater than the passed size
 	}
 
 	//Delete i.e POP
 
-	private int pop() throws StackException{
+	public int pop() throws StackException{
 		if(isEmpty()){
 		throw new StackException("Cannot pop from an empty stack");
 		}
 
-		ptr--;
 		int remove = data[ptr];
+		ptr--;
 		return remove;
 	}
 
-	private boolean isEmpty() {
+	public boolean isEmpty() {
 		return ptr == -1;
 	}
 
 	//Peek or finding out the element at the top of the stack
 
-	private int peek() throws StackException{
+	public int peek() throws StackException{
 
 		if(isEmpty()){
 			throw new StackException("Cannot peek from an empty stack");
 		}
+
 		return data[ptr];
 	}
 
