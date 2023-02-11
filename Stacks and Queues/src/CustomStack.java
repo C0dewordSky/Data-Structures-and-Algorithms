@@ -17,10 +17,10 @@ public class CustomStack {
 
 	//Insert i.e. Push
 
-	private boolean push(int item) throws Exception{
+	private boolean push(int item) throws StackException{
 
 		if(isFull()){
-			throw new Exception("Cannot push in an empty stack");
+			throw new StackException("Cannot push in an empty stack");
 		}
 
 		ptr++;
@@ -35,9 +35,9 @@ public class CustomStack {
 
 	//Delete i.e POP
 
-	private int pop() throws Exception{
+	private int pop() throws StackException{
 		if(isEmpty()){
-		throw new Exception("Cannot pop from an empty stack");
+		throw new StackException("Cannot pop from an empty stack");
 		}
 
 		ptr--;
@@ -51,10 +51,10 @@ public class CustomStack {
 
 	//Peek or finding out the element at the top of the stack
 
-	private int peek() throws Exception{
+	private int peek() throws StackException{
 
 		if(isEmpty()){
-			throw new Exception("Cannot peek from an empty stack");
+			throw new StackException("Cannot peek from an empty stack");
 		}
 		return data[ptr];
 	}
