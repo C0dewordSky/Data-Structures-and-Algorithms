@@ -122,4 +122,20 @@ public class LL {
 		System.out.println(-1);
 		return -1;
 	}
-}
+
+	public void removeDuplicate(){
+		Node temp = head;
+
+		while(temp.next != null){
+			if(temp.data == temp.next.data){
+				temp.next = temp.next.next;
+				size--;
+			}else{
+				temp = temp.next;
+			}
+		}
+		tail = temp;
+		temp.next = null;
+	}
+	}
+
