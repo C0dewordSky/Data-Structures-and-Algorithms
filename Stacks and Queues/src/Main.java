@@ -10,21 +10,23 @@ public class Main {
 		stack.push(16);
 		stack.push(69);
 		stack.push(6);
-		stack.push(78);
+		//stack.push(78);
+		stack.display();
 		System.out.println(stack.pop());
-		System.out.println(stack.peek());
+		stack.display();
+	//	System.out.println(stack.peek());
 
 
-		DynamicStack dstack = new DynamicStack(5);
+	//	DynamicStack dstack = new DynamicStack(5);
 
-		dstack.push(7);
-		dstack.push(18);
-		dstack.push(16);
-		dstack.push(69);
-		dstack.push(6);
-		dstack.push(78);
-		System.out.println(dstack.pop());
-		System.out.println(dstack.peek());
+	//	dstack.push(7);
+	//	dstack.push(18);
+		//dstack.push(16);
+		//dstack.push(69);
+		//dstack.push(6);
+		//dstack.push(78);
+	//	System.out.println(dstack.pop());
+	//	System.out.println(dstack.peek());
 
 
 	}

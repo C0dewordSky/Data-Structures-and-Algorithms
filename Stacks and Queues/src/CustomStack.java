@@ -41,9 +41,8 @@ public class CustomStack {
 		throw new StackException("Cannot pop from an empty stack");
 		}
 
-		int remove = data[ptr];
-		ptr--;
-		return remove;
+
+		return data[ptr--];
 	}
 
 	public boolean isEmpty() {
@@ -57,8 +56,18 @@ public class CustomStack {
 		if(isEmpty()){
 			throw new StackException("Cannot peek from an empty stack");
 		}
-
 		return data[ptr];
+	}
+
+	public void display() throws StackException{
+		if(isEmpty()){
+			throw new StackException("The stack is empty");
+		}
+
+		for(int i=data.length-1;i>=0;i--){
+			System.out.println(i +". " + data[i]);
+		}
+		System.out.println();
 	}
 
 }
